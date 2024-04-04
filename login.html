@@ -71,17 +71,20 @@
             overflow: hidden;
         }
     </style>
+<script type="text/javascript" src="vertify.js"></script>
 </head>
 
 <body>
+
     <div class="login-form">
         <h2>Welcome Login</h2>
-        <form action="#">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit"><a herf="index.html">Log in</a></button>
+        <form name="f" onsubmit="check(this)">
+            <input type="text"  id="name" placeholder="Employee Code">
+            <input type="password" id="pass" placeholder="Password">
+            <input type="button" onclick="check(this)" value="登录">
         </form>
     </div>
+
 </body>
 
 </html>
