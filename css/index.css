@@ -44,6 +44,21 @@ ul {
     text-align: center;
     margin-top: 30px;
 }
+.ai_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ai {
+    width: 70%;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 50px; /* 调整按钮整体向下位置 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* 调整按钮间距 */
+}
 li {
     margin-bottom: 20px;
 }
