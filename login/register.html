@@ -63,7 +63,7 @@
 	    ele.className = newClass.replace(/^\s+|\s+$/g, '');
 	  }
 	}
-	# 以下要全部删掉自己写捏
+	// 以下要全部删掉自己写捏
 		document.querySelector(".register-button").onclick = function(){
 				addClass(document.querySelector(".register"), "active")
 				setTimeout(function(){
@@ -75,6 +75,7 @@
 					removeClass(document.querySelector(".sk-rotating-plane"), "active")
 					document.querySelector(".register").style.display = "block"
 					alert("登录成功")
+					window.location.replace("../login.html")
 					
 				},5000)
 		}
