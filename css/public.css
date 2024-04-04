@@ -7,7 +7,7 @@
 
 /* 侧边悬浮导航 */
 .right_nav{ right:0; bottom:100px; position:fixed; text-align:left;overflow: hidden;z-index:999;}
-.right_nav li{background:#FFFFFF;margin:4px 0;padding: 10px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;cursor:pointer;position:relative; right: -70px;}
+.right_nav li{background:#181818;margin:4px 0;padding: 10px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;cursor:pointer;position:relative; right: -70px;}
 .right_nav li .iconBox{text-align: center;overflow: hidden;display: flex;align-items: center;justify-content: space-between}
 .right_nav li img{width: 30px;height:30px;}
 .right_nav li h4{color: #fff;font-size:14px;margin:2px 0;margin-left: 15px;}
