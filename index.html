@@ -114,6 +114,16 @@
             border-right: 2px solid #000000;
             transition: left 0.3s ease;
         }
+        .left-area {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 50%;
+            height:50%;
+            z-index: 9999;
+
+        }
         .left-float ul {
             padding: 0;
             margin: 0;
@@ -128,11 +138,11 @@
             color: #000000;
         }
         /* 显示左侧浮窗 */
-        body:hover .left-float {
+        .left-area:hover .left-float {
             left: 0;
         }
         /* 隐藏左侧浮窗 */
-        body:not(:hover) .left-float {
+        .left-area:not(:hover) .left-float {
             left: -200px;
         }
         /* 底部浮窗样式 */
@@ -167,6 +177,7 @@
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/public.css">
 </head>
 <body>
@@ -189,6 +200,7 @@
     </div>
 
     <!-- 左侧浮窗 -->
+    <div class="left-area">
     <div class="left-float">
         <ul>
             <li><a href="textai.html">文本AI</a></li>
@@ -196,6 +208,7 @@
             <li><a href="videoai.html">视频AI</a></li>
             <li><a href="texttopic.html">图片AI</a></li>
         </ul>
+    </div>
     </div>
     <!-- 底部浮窗 -->
     <div class="bottom-float">
