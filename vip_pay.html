@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI付费界面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+        }
+        .container {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            padding: 20px;            
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            left: 0;
+            right: 0;
+        }       
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .package {
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 20px;
+        }
+        .package h2 {
+            color: #333333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .package .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        .package ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .package ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .plan-type {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .left-float {
+            position: fixed;
+            left: 0;
+            top: 70%;
+            transform: none;
+            background-color: #181818;
+            padding: 20px;
+            border-right: 2px solid #f9fbfb;
+            border-radius: 0 8px 8px 0;
+        }
+        .left-float a {
+            display: block;
+            color: #fefdfd;
+            text-decoration: none;
+            font-size: 18px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        .left-float a:hover {
+            color: #0c0c0c;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/back_homepage.css"/>
+</head>
+<body>
+    <div class="homepage">
+        <a href="index.html">> 返回主页</a>
+    </div>
+    <div class="container">
+        <h1>AI付费界面</h1>
+        <div class="pricing-table">
+            <div class="package">
+                <div class="plan-type">包月套餐</div>
+                <h2>普通套餐</h2>
+                <div class="price">$99/month</div>
+                <ul>
+                    <li>功能一</li>
+                    <li>功能二</li>
+                    <li>功能三</li>
+                </ul>
+                <a href="#" class="btn">选择套餐</a>
+            </div>
+            <div class="package">
+                <div class="plan-type">包月套餐</div>
+                <h2>标准套餐</h2>
+                <div class="price">$199/month</div>
+                <ul>
+                    <li>所有普通套餐功能</li>
+                    <li>功能四</li>
+                    <li>功能五</li>
+                </ul>
+                <a href="#" class="btn">选择套餐</a>
+            </div>
+            <div class="package">
+                <div class="plan-type">包年套餐</div>
+                <h2>豪华套餐</h2>
+                <div class="price">$299/year</div>
+                <ul>
+                    <li>所有标准套餐功能</li>
+                    <li>功能六</li>
+                    <li>功能七</li>
+                </ul>
+                <a href="#" class="btn">选择套餐</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
