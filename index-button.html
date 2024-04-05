@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求索</title>
+    <script src="sidebar.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            position: relative; /* 添加相对定位 */
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            position: relative; /* 添加相对定位 */
+            overflow: hidden;
+        }
+        h1::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 100%;
+            top: 0;
+            left: -10%;
+            background: linear-gradient(90deg, transparent, #717171, transparent);
+            animation: animate 3s linear infinite;
+        }
+        @keyframes animate {
+            0% {
+                left: -10%;
+            }
+            50% {
+                left: 110%;
+            }
+            100% {
+                left: 110%;
+            }
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.3s ease;
+            padding: 10px 20px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            background-color: transparent;
+            font-weight: bold;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #000000;
+        }
+        .pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1593642532499-68f45f9df254') repeat;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        /* 登录按钮样式 */
+        .login-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            background-color: transparent;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #000000;
+        }
+        /* 用户注册和登录链接样式 */
+        .user-links {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+        }
+        .user-links a {
+            margin-left: 20px;
+        }
+        /* 左侧浮窗样式 */
+        .left-float {
+            position: fixed;
+            left: 200px;
+            top: 50%;
+
+            background-color: #ffffff;
+            padding: 20px;
+
+        }
+        .left-area {
+            position: fixed;
+            top: 50%;
+
+            left: 0;
+            width: 50%;
+            height:50%;
+            z-index: 9999;
+
+        }
+        .left-float ul {
+            padding: 0;
+            margin: 0;
+        }
+        .left-float li {
+            margin-bottom: 10px;
+        }
+        .left-float a {
+            color: #000000;
+        }
+        .left-float a:hover {
+            color: #000000;
+        }
+        /* 底部浮窗样式 */
+        .bottom-float {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 20px 0; /* 为了让文字垂直居中 */
+            text-align: center;
+        }
+        .bottom-float ul {
+            padding: 0;
+            margin: 0;
+        }
+        .bottom-float li {
+            display: inline; /* 将 li 元素变为行内元素 */
+            margin-right: 20px; /* 控制按钮之间的间距 */
+        }
+        .bottom-float a {
+            color: #000000;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+        .bottom-float a:hover {
+            color: #000000;
+        }
+        /* 艺术字按钮样式 */
+        .art-button {
+            font-size: 18px; /* 艺术字按钮的字体大小 */
+        }
+        .sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+}
+
+.sidebar-hidden {
+    transform: translateX(-200px);
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 50%;
+    left: 200px; /* 设置为页面左侧 */
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 999; /* 确保按钮在侧边栏上方 */
+    transition: transform 0.3s ease; /* 添加动画效果 */
+}
+
+.toggle-btn.hidden {
+    transform: translateX(-200px); /* 按钮隐藏时向左移动200px */
+}
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+<body>
+    <div class="pattern"></div>
+    <h1><span style="color: #000000;">求索</span>AI</h1>
+    <div class="ai_container">
+    <ul class="ai">
+        <li><a href="http://8.222.162.255:3002/#/chat/1002">ChatGPT</a></li>
+        <li><a href="#section-2">Chatbot</a></li>
+        <li><a href="http://8.222.162.255:3000/">Gemini</a></li>
+        <li><a href="#section-4">Bing Copilot</a></li>
+        <li><a href="#section-5">Claude 3</a></li>
+        <li><a href="#section-6">SillyTavern</a></li>
+        <li><a href="http://sd-4145c6--sd.fcv3.1759279990275127.cn-shanghai.fc.devsapp.net">Stable Diffusion</a></li>
+        <li><a href="https://app.runwayml.com/login">runway</a></li>
+        <li><a href="https://app.synthesia.io/#/login ">演讲视频</a></li>
+        <li><a href="https://app.pictory.ai/login">长视频提炼短视频</a></li>
+        <li><a href="https://auth.ayoa.com/login">思维导图</a></li>
+        <li><a href="https://gamma.app/signin">流程图</a></li>
+        <li><a href="https://whimsical.com/login">PPT</a></li>
+    </ul>
+    </div>
+
+    <!-- 用户注册和登录链接 -->
+    <div class="user-links">
+        <a href="register.html">用户注册</a>
+        <a href="login.html">用户登录</a>
+    </div>
+
+    <!-- 左侧浮窗 -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="textai.html">文本AI</a></li>
+            <li><a href="workai.html">办公AI</a></li>
+            <li><a href="videoai.html">视频AI</a></li>
+            <li><a href="texttopic.html">图片AI</a></li>
+        </ul>
+    </div>
+    <button class="toggle-btn" onclick="toggleSidebar()">></button>
+    <!-- 底部浮窗 -->
+    <div class="bottom-float">
+        <ul>
+            <li><a href="#section-1">操作手册</a></li>
+            <li><a href="#section-5">付费详则</a></li>
+            <li><a href="about us.html">关于我们</a></li>
+        </ul>
+    </div>
+    <!-- 在线客服 -->
+    <!-- 右侧导航 -->
+    <ul class="right_nav">
+       <li>
+          <div class="iconBox oln_ser"> 
+             <img src='imgs/rnqq.png'>
+             <h4>在线客服</h4>
+          </div>
+          <div class="hideBox">
+             <div class="hb">
+                <h5>在线咨询</h5>
+                <div class="qqtalk">
+                   <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=（你的QQ号码）&site=qq&menu=yes">
+                      <span><img src="imgs/online.png" alt="点击发消息"
+                            title="点击发消息" /></span>
+                      <p>点击发消息</p>
+                   </a>
+                </div>
+             </div>
+          </div>
+       </li>
+       <li>
+          <div class="iconBox phe_num">
+             <img src='imgs/rncall.png'>
+             <h4>联系电话</h4>
+          </div>
+          <div class="hideBox">
+             <div class="hb">
+                <h5>热线电话</h5>
+                <p>88888888</p>
+             </div>
+          </div>
+       </li>
+       <li>
+          <div class="iconBox">
+             <img src='imgs/rnphone.png'>
+             <h4>手机站点</h4>
+          </div>
+          <div class="hideBox">
+             <div class="hb">
+                <h5>手机扫一扫打开</h5>
+                <img src=' '>  <!--此处加一个联系方式二维码-->
+             </div>
+          </div>
+       </li>
+       <li>
+          <div class="iconBox to_msg">
+             <img src='imgs/rnmsg.png'>
+             <h4>在线留言</h4>
+          </div>
+       </li>
+       <li>
+          <div class="iconBox top">
+             <img src='imgs/rntop.png'>
+             <h4>回到顶部</h4>
+          </div>
+       </li>
+    </ul>
+</body>
+<script src="js/jquery.1.11.3.min.js"></script>
+<script type="text/javascript" src='js/rightAsk.js'></script>
+</html>
