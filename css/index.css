@@ -123,10 +123,10 @@ a:hover {
 }
 .left-area {
     position: fixed;
-    top: 20%;
+    top: 50%;
     transform: translateY(-50%);
     left: 0;
-    width: 50%;
+    width: 20%;
     height:50%;
     z-index: 9999;
 
